@@ -1,0 +1,21 @@
+export default function StatCard({
+  title,
+  value,
+  subtitle,
+  icon: Icon,
+  color = "green",
+}) {
+  return (
+    <div className="stat-card">
+      <div className="stat-card-top">
+        <span className="stat-title">{title}</span>
+        <div className={`stat-icon stat-icon-${color}`}>
+          <Icon size={21} />
+        </div>
+      </div>
+
+      <h3 className="stat-value">{value}</h3>
+      <p className="stat-subtitle">{subtitle}</p>
+    </div>
+  );
+}
